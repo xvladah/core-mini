@@ -1,22 +1,20 @@
 {
   "name": "xvladah/core-mini",
   "description": "Web mini Core",
-  "version": "1.2.0",
   "type": "library",
   "license": "MIT",
   "autoload": {  
     "classmap": [
-      "vendor/xvladah/core-mini/Database/DBO/",
-      "vendor/xvladah/core-mini/Database/MySQL/",
-      "vendor/xvladah/core-mini/Database/OCI8/",
-      "vendor/xvladah/core-mini/",
-      "vendor/xvladah/core-mini/Html/",
-      "vendor/xvladah/core-mini/Http/",
-      "vendor/xvladah/core-mini/User/",
-      "vendor/xvladah/core-mini/Types/",
-      "vendor/xvladah/core-mini/Auth/",
-      "vendor/xvladah/core-mini/Templates/",
-      "vendor/xvladah/core-mini/FormEngine/"
+      "src/Database/DBO/",
+      "src/Database/MySQL/",
+      "src/Database/OCI8/",
+      "src/",
+      "src/Html/",
+      "src/Http/",
+      "src/Auth/",
+      "src/Types/",
+      "src/Templates/",
+      "src/FormEngine/"
     ],
     "exclude-from-classmap": [
     ],
