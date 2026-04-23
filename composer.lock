@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9425d91d0b87f99e562e2b0b343aa4f1",
+    "content-hash": "1887c7ba9c97f25afc1dcf9550d6975b",
     "packages": [],
     "packages-dev": [],
     "aliases": [],
@@ -12,7 +12,17 @@
     "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {},
+    "platform": {
+        "ext-sqlite3": "*",
+        "ext-oci8": "*",
+        "ext-mysqli": "*",
+        "ext-mbstring": "*",
+        "ext-iconv": "*",
+        "ext-curl": "*",
+        "ext-calendar": "*",
+        "ext-gd": "*",
+        "ext-zip": "*"
+    },
     "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
