@@ -1,0 +1,15 @@
+MyService/
+├── run.php
+├── config.php
+├── logs/                  (prázdná složka)
+├── src/
+│   ├── ServiceConfig.php
+│   ├── ServiceLogger.php
+│   ├── ServiceWorker.php
+│   └── ServiceMain.php
+├── client/
+│   ├── stop_service.php
+│   └── status_service.php
+├── systemd/
+│   └── myservice.service
+└── composer.json

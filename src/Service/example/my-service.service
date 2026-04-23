@@ -1,0 +1,35 @@
+#systemctl daemon-reload
+#systemctl start myservice@serviceA
+#systemctl start myservice@serviceB
+#systemctl enable myservice@serviceA
+#systemctl enable myservice@serviceB
+
+#systemctl status myservice@serviceA
+#journalctl -u myservice@serviceA -f
+
+[Unit]
+Description=My PHP Service
+After=network.target
+
+# Pokud ExecStart selže hned při startu, služba nebude restartována
+StartLimitIntervalSec=10
+StartLimitBurst=5
+
+[Service]
+Type=simple
+Environment=SERVICE_LOG_FILE=/var/log/myservice/service.log
+Environment=SERVICE_NAME=%i
+ExecStart=/usr/bin/php /opt/MyService/run.php
+ExecStartPre=/bin/bash -c 'echo "SERVICE STARTING" >> $LOGFILE'
+ExecStop=/bin/bash -c 'echo "SERVICE STOPPING" >> $LOGFILE'
+Restart=always
+RestartSec=5
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/MyService
+
+StandardOutput=append:${LOGFILE}
+StandardError=append:${LOGFILE}
+
+[Install]
+WantedBy=multi-user.target

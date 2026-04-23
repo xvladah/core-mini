@@ -1,0 +1,28 @@
+{
+  "name": "xvladah/CoreMini",
+  "description": "Web mini Core",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Core\\": "src/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/xvladah/CoreMini"
+    }
+  ],
+  "require": {
+    "ext-sqlite3": "*",
+    "ext-oci8": "*",    
+    "ext-mysqli": "*",
+    "ext-mbstring": "*",
+    "ext-iconv": "*",
+    "ext-curl": "*",
+    "ext-calendar": "*",
+    "ext-gd": "*",
+    "ext-zip": "*"
+  }
+}

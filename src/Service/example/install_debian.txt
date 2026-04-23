@@ -1,0 +1,21 @@
+Zkopíruj projekt do /opt/MyService (např.)
+
+composer install --no-dev
+
+Vytvoř logs/ složku a dej správná práva:
+
+sudo mkdir /opt/MyService/logs
+sudo chown www-data:www-data /opt/MyService/logs
+
+Zkopíruj systemd/myservice.service do /etc/systemd/system/
+
+sudo cp systemd/myservice.service /etc/systemd/system/myservice.service
+sudo systemctl daemon-reload
+sudo systemctl enable myservice
+sudo systemctl start myservice
+
+
+Kontrola:
+
+sudo systemctl status myservice
+journalctl -u myservice -f
