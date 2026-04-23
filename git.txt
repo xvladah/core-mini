@@ -4,7 +4,7 @@ git init
 git add .
 git commit -m "Initial commit"
 
-git remote add origin https://github.com/xvladah/core
+git remote add origin https://github.com/xvladah/core-mini
 
 git branch -M main
 git push -u origin main
@@ -18,5 +18,5 @@ git tag v1.1.0
 git push origin v1.1.0
 
 jdi na packagist.org
-tlacitko submit a vlozit URL https://github.com/xvladah/core
+tlacitko submit a vlozit URL https://github.com/xvladah/core-mini
 
